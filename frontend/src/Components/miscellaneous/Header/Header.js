@@ -37,7 +37,7 @@ const options = {
     nav4justifyContent: "flex-start",
     link1ColorHover: "#ad9551",
     link1Margin: "1vmax",
-    profileIconUrl: "/login",
+    profileIconUrl: "/profile",
     profileIcon:true,
     profileIconColor: "black",
     ProfileIconElement: MdAccountCircle,

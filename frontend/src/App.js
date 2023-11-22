@@ -15,6 +15,13 @@ import Kids from './Components/Product/Kid';
 
 import Login from './Components/miscellaneous/Login/Login';
 import Register from './Components/miscellaneous/Register/Register';
+import { useEffect } from 'react';
+import './store';
+import store from './store';
+import { loadUser } from './Action/userAction';
+import { useSelector } from 'react-redux';
+import Profile from './Components/User/Profile';
+
 // import Men from './Components/Product/Men';
 // import Kids from './Components/Product/Kid';
 // import Home from './Home';
@@ -23,8 +30,12 @@ import Register from './Components/miscellaneous/Register/Register';
 
 
 
-
 function App() {
+  const { isAuthenticated } = useSelector((state) => state.user);
+
+  useEffect(()=>{
+  store.dispatch(loadUser());
+  },[])
   return (
     <div className="App">
     <BrowserRouter>
@@ -37,8 +48,10 @@ function App() {
         <Route path="/men" element={<Men/>}/>
         <Route path="/kids" element={<Kids/>}/>
         <Route path="/contact" element={<Contact/>}/>
+        <Route path="/profile" element={isAuthenticated ? <Profile/> : <Login/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
+        {/* <Route path="/loader" element={<Loader/>}/> */}
     </Routes>
     </BrowserRouter>
    
