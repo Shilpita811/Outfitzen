@@ -2,6 +2,9 @@ const ErrorHander = require("../utils/errorhandler");
 const cathAsyncErrors = require("../middleware/catchAsyncError");
 const User = require("../models/userModel");
 const sendToken = require("../utils/jwtToken");
+const Contact=require("../models/contactModel");
+const catchAsyncError = require("../middleware/catchAsyncError");
+
 
 // Register a User 
 exports.registerUser = cathAsyncErrors(async (req,res,next)=>{
@@ -55,3 +58,14 @@ exports.getUserProfile = cathAsyncErrors(async (req, res, next) => {
         user,
     });
 });
+//Contact
+exports.contactUs=catchAsyncError(async (req, res, next) => {
+    const{name,email,phone,subject}=req.body;
+    const contact=await Contact.create({
+        name,email,phone,subject
+    });
+    res.status(201).json({
+        success: true,
+        contact,
+    })
+})
