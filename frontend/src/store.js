@@ -2,6 +2,7 @@ import { legacy_createStore as createStore, combineReducers, applyMiddleware } f
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { userReducer } from './Reducer/userReducer';
+import { otherReducer } from './Reducer/otherReducer';
 
 
 
@@ -9,6 +10,7 @@ import { userReducer } from './Reducer/userReducer';
 
 const reducer = combineReducers({
     user: userReducer,
+    other: otherReducer,
 });
 
 let initialState={}

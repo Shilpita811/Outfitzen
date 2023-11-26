@@ -29,7 +29,6 @@ const Signin = () => {
     myForm.append("email", email);
     myForm.append("password", password);
     dispatch(register(myForm));
-    console.log(myForm);
   };
 
   const registerDataChange = (e) => {
