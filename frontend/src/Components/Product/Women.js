@@ -1,10 +1,10 @@
 import React from 'react'
 import './Women.css'
-import w3 from '../../images/Women/W3.jpg'
+import w3 from '../../images/ww3.jpg'
 import w4 from '../../images/Women/W4.jpg'
-import w5 from '../../images/Women/W5.jpg'
-import w6 from '../../images/Women/W6.jpg'
-import w7 from '../../images/Women/W7.jpg'
+import w5 from '../../images/ww2.jpg'
+import w6 from '../../images/ww5.jpg'
+import w7 from '../../images/ww6.jpg'
 
 
 const Women = () => {
@@ -13,8 +13,8 @@ const Women = () => {
             <div id="columns" className="columns_4">
                 <figure>
                     <img src={w3} alt="Sharara Set"/>
-                    <figcaption>Sharara Set</figcaption>
-                    <span className="price">$34</span>
+                    <figcaption>Shirt</figcaption>
+                    <span className="price">Rs 534</span>
                     <a className="button" href="#">
                         Buy Now
                     </a>
@@ -23,8 +23,8 @@ const Women = () => {
                 <figure>
                 <img src={w4} alt='Top With Palazzo'/>
         
-                    <figcaption>Top With Palazzo</figcaption>
-                    <span className="price">$44</span>
+                    <figcaption>Skirt</figcaption>
+                    <span className="price">Rs 544</span>
                     <a className="button" href="#">
                         Buy Now
                     </a>
@@ -33,8 +33,8 @@ const Women = () => {
                 <figure>
                 <img src={w5} alt='Shirt'/>
 
-                    <figcaption>Shirt</figcaption>
-                    <span className="price">$54</span>
+                    <figcaption>grown</figcaption>
+                    <span className="price">Rs 854</span>
                     <a className="button" href="#">
                         Buy Now
                     </a>
@@ -44,7 +44,7 @@ const Women = () => {
                 <img src={w6} alt='Shirt'/>
                     {/* <img src="https://i.imgur.com/SZmPJ7W.jpg" alt="Polka Dots" /> */}
                     <figcaption>Drop Shoulder Shirt</figcaption>
-                    <span className="price">$44</span>
+                    <span className="price">Rs 944</span>
                     <a className="button" href="#">
                         Buy Now
                     </a>
@@ -55,7 +55,7 @@ const Women = () => {
 
                     {/* <img src="https://i.imgur.com/OiEMgMx.jpg" alt="Blue Spots" /> */}
                     <figcaption>Formal Wide Leg Straight Pant</figcaption>
-                    <span className="price">$74</span>
+                    <span className="price">Rs 974</span>
                     <a className="button" href="#">
                         Buy Now
                     </a>
